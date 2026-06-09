@@ -1,5 +1,5 @@
 {
-  "name": "Starter Kit",
+  "name": "docs",
   "colors": {
     "light": {
       "brand": "#F97316"
@@ -36,6 +36,17 @@
           }
         ]
       }
+    ]
+  },
+  "title": "docs",
+  "template": "atlas",
+  "ai": {
+    "page-actions": [
+      "claude",
+      "chatgpt",
+      "perplexity",
+      "grok",
+      "mcp"
     ]
   }
 }
