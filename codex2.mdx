@@ -1,0 +1,638 @@
+---
+title: Codex 配置与定制
+---
+Codex 配置与定制
+
+\===========
+
+Codex 提供丰富的配置选项，让你定制 Agent 的行为以适应不同的工作需求。
+
+默认情况下 Codex App 会根据你的系统设置语言，如果没有可以通过 Settings（ 设置 ）：
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/runoob_1778499570903.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/runoob\_1778499570903.png</a>)
+
+选择 General（常规） 常规选项修改你需要的语言：
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/runoob_1778499599547.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/runoob\_1778499599547.png</a>)
+
+同样如果要中文改英文，勾选英文即可：
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/05/runoob_1778499288849.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/05/runoob\_1778499288849.png</a>)
+
+\* \* \*
+
+Codex App 的设置
+
+\-------------
+
+打开方式：点击应用菜单中的设置（ Settings ），或按 Cmd + ,：
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/f6af7301-9561-414c-9496-a5ab4e933037.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/f6af7301-9561-414c-9496-a5ab4e933037.png</a>)
+
+设置界面如下所示：
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/85646851-d06d-48d2-838f-f6fa9c3000a7.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/85646851-d06d-48d2-838f-f6fa9c3000a7.png</a>)
+
+**常规（General）：**&#x914D;置文件的打开方式、命令输出在对话线程中的显示量。还可设置多行提示需要 Cmd+Enter 确认，以及防止任务运行期间系统休眠。
+
+**通知（Notifications）：**&#x8BBE;置任务完成通知的触发时机，以及是否由应用主动请求系统通知权限。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/8fa52738-fae3-4f52-b104-d189ae183812.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/8fa52738-fae3-4f52-b104-d189ae183812.png</a>)
+
+**Agent 配置（Agent Configuration）：**&#x41;pp 中的 Codex Agent 与 IDE 和 CLI 扩展共享同一套配置。常用选项可在 App 内直接调整，高级选项需编辑 config.toml 文件（后文说明）。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/a3072255-f88e-4046-af22-268666e05720.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/a3072255-f88e-4046-af22-268666e05720.png</a>)
+
+**外观（Appearance）：**&#x652F;持选择基础主题，调整强调色、背景色和前景色，以及更换 UI 字体和代码字体。可将自定义主题分享给他人。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/d5ad7055-f518-412e-86b3-cf3060d98624.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/d5ad7055-f518-412e-86b3-cf3060d98624.png</a>)
+
+**Codex 宠物（Codex Pets）:**&#x53EF;选的动态陪伴角色，路径：\*\*Settings（设置） > Appearance（外观） > Pets（宠物）\*\*，可选择内置宠物或从本地 Codex 主目录加载自定义宠物。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/runoob-1778053238310.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/runoob-1778053238310.png</a>)
+
+**操作方式：**
+
+\*   在输入框中输入 `/pet`
+
+*&#x20;  使用&#x20;*\*Settings > Appearance\*\* 中的 **Wake Pet** 或 **Tuck Away Pet**
+
+\*   按 `Cmd+K` / `Ctrl+K` 后运行同名命令
+
+宠物悬浮窗可在使用其他应用时持续显示当前 Codex 工作状态（运行中 / 等待输入 / 待审查），并附有简短进度提示。
+
+**自定义宠物（创建流程）：**
+
+$skill\\-installer hatch\\-pet
+
+安装后在命令菜单中选择 **Force Reload Skills**，再执行：
+
+$hatch\\-pet create a new pet inspired by my recent projects
+
+**Git**: 统一分支命名规范，配置是否启用强制推送（force push），并设置 Codex 自动生成提交信息（commit message）和 PR 描述时所用的提示语。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/git_1778053491143.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/git\_1778053491143.png</a>)
+
+**环境：**&#x53EF;以查看项目目录及添加项目。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/env_1778053603004.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/env\_1778053603004.png</a>)
+
+**工作树：** 利用 Git worktree 让 Codex 在同一项目中并行处理多个任务。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/worktree_1778053624590.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/worktree\_1778053624590.png</a>)
+
+**浏览器使用（Browser Use）：**&#x5B89;装或启用内置 Browser 插件，管理网站白名单和黑名单。默认情况下，Codex 使用任何网站前都会先询问用户；将网站从黑名单移除后，Codex 将恢复询问行为。详见应用内浏览器文档。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/bu_1778053917353.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/bu\_1778053917353.png</a>)
+
+**电脑操控（Computer Use）：**&#x4EC5;限 macOS。可查看桌面应用访问权限及相关偏好设置。如需撤销系统级权限，请前往 macOS 隐私与安全性 中修改屏幕录制或辅助功能权限。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/cs_1778053757990.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/cs\_1778053757990.png</a>)
+
+**已归档的项目（Archived Threads）：**&#x5217;出所有已归档的对话，显示日期和项目上下文。点击取消归档（ Unarchive） 可恢复指定线程。
+
+!\[]\(<a href="https://www.runoob.com/wp-content/uploads/2026/03/at_1778053738087.png" target="_blank" rel="noopener noreferrer">https\://www\.runoob.com/wp-content/uploads/2026/03/at\_1778053738087.png</a>)
+
+\* \* \*
+
+配置文件位置
+
+\------
+
+Codex 配置文件分层管理：
+
+层级
+
+路径
+
+作用范围
+
+**用户级**
+
+`~/.codex/config.toml`
+
+全局默认配置
+
+**项目级**
+
+`.codex/config.toml`
+
+项目特定配置
+
+**托管级**
+
+企业下发
+
+企业统一配置
+
+\### 配置合并规则
+
+配置按优先级合并：
+
+\*   托管配置优先级最高
+
+\*   项目配置覆盖用户配置
+
+\*   用户配置作为默认值
+
+\* \* \*
+
+基础配置项
+
+\-----
+
+基础配置
+
+\----
+
+\\# \~/.codex/config.toml &#x20;
+
+&#x20;&#x20;
+
+\\# 默认模型 &#x20;
+
+model = "gpt-5.4" &#x20;
+
+&#x20;&#x20;
+
+\\# 推理强度 &#x20;
+
+model\\\_reasoning\\\_effort = "medium"  # minimal | low | medium | high | xhigh &#x20;
+
+&#x20;&#x20;
+
+\\# 推理摘要详细程度 &#x20;
+
+model\\\_reasoning\\\_summary = "auto"  # auto | concise | detailed | none &#x20;
+
+&#x20;&#x20;
+
+\\# 服务层级 &#x20;
+
+service\\\_tier = "flex"  # flex | fast &#x20;
+
+&#x20;&#x20;
+
+\\# 审批策略 &#x20;
+
+approval\\\_policy = "suggest"  # suggest | auto-edit | full-auto &#x20;
+
+\* \* \*
+
+<a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a>
+
+\---------
+
+<a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a> 是项目级的 Agent 指令文件，定义 Codex 在该项目中的行为规范。
+
+\### 文件发现顺序
+
+1\.  读取全局 `~/.codex/AGENTS.md`
+
+2\.  从项目根目录向下搜索每个目录
+
+3\.  更近目录的规则覆盖更远的
+
+\### <a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a> 示例
+
+项目 <a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a>
+
+\------------
+
+\\# 项目开发规范 &#x20;
+
+&#x20;&#x20;
+
+\\## 技术栈 &#x20;
+
+\\- 前端：React + TypeScript &#x20;
+
+\\- 后端：Python FastAPI &#x20;
+
+\\- 数据库：PostgreSQL &#x20;
+
+&#x20;&#x20;
+
+\\## 代码规范 &#x20;
+
+\\- 使用 4 空格缩进 &#x20;
+
+\\- 每行最多 100 字符 &#x20;
+
+\\- 所有函数必须有类型注解 &#x20;
+
+&#x20;&#x20;
+
+\\## 测试要求 &#x20;
+
+\\- 新功能必须包含测试 &#x20;
+
+\\- 使用 pytest 运行测试 &#x20;
+
+&#x20;&#x20;
+
+\\## Git 提交 &#x20;
+
+\\- 使用 Conventional Commits 格式 &#x20;
+
+\\- 提交信息描述"为什么" &#x20;
+
+&#x20;&#x20;
+
+\\## Review guidelines &#x20;
+
+\\- Don't log PII &#x20;
+
+\\- Verify authentication middleware &#x20;
+
+\\- Check for SQL injection &#x20;
+
+\### 子目录覆盖
+
+可以在子目录放置 <a href="http://AGENTS.override.md" target="_blank" rel="noopener noreferrer">AGENTS.override.md</a>：
+
+子目录规则
+
+\-----
+
+\\# src/auth/ 模块规则 &#x20;
+
+&#x20;&#x20;
+
+\\## 安全要求 &#x20;
+
+\\- 所有密码必须 bcrypt 加密 &#x20;
+
+\\- 添加审计日志 &#x20;
+
+\\- 检查 SQL 注入 &#x20;
+
+\> <a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a> 大小限制为 32 KiB，超过会被截断。
+
+\* \* \*
+
+Skills（技能）
+
+\----------
+
+Skills 是可复用的自定义能力，封装常用任务逻辑。
+
+\### 技能目录位置
+
+位置
+
+路径
+
+作用
+
+**REPO**
+
+`.agents/skills/`
+
+项目级技能
+
+**USER**
+
+`~/.agents/skills/`
+
+用户级技能
+
+**ADMIN**
+
+`/etc/codex/skills/`
+
+系统级技能
+
+**SYSTEM**
+
+内置
+
+官方预置技能
+
+\### 技能结构
+
+skill\\-name/
+
+├── <a href="http://SKILL.md" target="_blank" rel="noopener noreferrer">SKILL.md</a>       \\# 技能定义（必需）
+
+├── scripts/       \\# 可选脚本
+
+├── references/    \\# 可选参考文档
+
+└── assets/        \\# 可选资源
+
+\### 创建技能
+
+技能定义
+
+\----
+
+\\--- &#x20;
+
+name: code-review-standard &#x20;
+
+description: 执行团队标准代码审查 &#x20;
+
+\\--- &#x20;
+
+&#x20;&#x20;
+
+\\# 代码审查标准 &#x20;
+
+&#x20;&#x20;
+
+\\## 审查项目 &#x20;
+
+1\\. 代码可读性 &#x20;
+
+2\\. 潜在 Bug &#x20;
+
+3\\. 安全漏洞 &#x20;
+
+4\\. 性能问题 &#x20;
+
+5\\. 测试覆盖 &#x20;
+
+&#x20;&#x20;
+
+\\## 输出格式 &#x20;
+
+\\- 问题列表（按严重程度） &#x20;
+
+\\- 改进建议 &#x20;
+
+\\- 评分（1-10） &#x20;
+
+\### 技能触发
+
+触发方式
+
+示例
+
+**显式调用**
+
+`$skill-name` 或 `/skill-name`
+
+**隐式匹配**
+
+任务描述匹配技能 description
+
+\* \* \*
+
+Subagents（子代理）
+
+\--------------
+
+Subagents 允许将复杂任务拆分给多个 Agent 并行处理。
+
+\### 内置代理类型
+
+代理
+
+功能
+
+**default**
+
+通用代理
+
+**worker**
+
+执行导向，适合实现和修复
+
+**explorer**
+
+探索导向，适合代码库分析
+
+\### 配置子代理
+
+子代理配置
+
+\-----
+
+\\# \~/.codex/config.toml &#x20;
+
+&#x20;&#x20;
+
+\\\[agents\\] &#x20;
+
+\\# 最大并行线程 &#x20;
+
+max\\\_threads = 6 &#x20;
+
+&#x20;&#x20;
+
+\\# 最大嵌套深度 &#x20;
+
+max\\\_depth = 1 &#x20;
+
+&#x20;&#x20;
+
+\\# 单任务超时 &#x20;
+
+job\\\_max\\\_runtime\\\_seconds = 1800 &#x20;
+
+\### 自定义代理
+
+自定义代理
+
+\-----
+
+\\# \~/.codex/agents/reviewer.toml &#x20;
+
+&#x20;&#x20;
+
+name = "reviewer" &#x20;
+
+description = "专注代码审查和质量问题" &#x20;
+
+nickname\\\_candidates = \\\["Reviewer", "QualityBot"\\] &#x20;
+
+&#x20;&#x20;
+
+developer\\\_instructions = """ &#x20;
+
+专注于代码质量审查： &#x20;
+
+\\- 检查代码风格一致性 &#x20;
+
+\\- 发现潜在 Bug &#x20;
+
+\\- 评估测试覆盖 &#x20;
+
+""" &#x20;
+
+\* \* \*
+
+Rules（规则）
+
+\---------
+
+Rules 定义命令执行策略，控制哪些命令可以自动执行。
+
+\### 规则文件
+
+规则使用 Starlark 语言（类似 Python）：
+
+规则定义
+
+\----
+
+\\# \~/.codex/rules/default.rules &#x20;
+
+&#x20;&#x20;
+
+\\# 允许 Git 命令 &#x20;
+
+prefix\\\_rule( &#x20;
+
+    pattern \\= \\\["git"\\], &#x20;
+
+    decision \\= "allow", &#x20;
+
+    justification \\= "Git commands are safe" &#x20;
+
+) &#x20;
+
+&#x20;&#x20;
+
+\\# 禁止 rm -rf / &#x20;
+
+prefix\\\_rule( &#x20;
+
+    pattern \\= \\\["rm", "-rf", "/"\\], &#x20;
+
+    decision \\= "forbidden", &#x20;
+
+    justification \\= "Prevent system damage" &#x20;
+
+) &#x20;
+
+&#x20;&#x20;
+
+\\# 询问 npm 命令 &#x20;
+
+prefix\\\_rule( &#x20;
+
+    pattern \\= \\\["npm"\\], &#x20;
+
+    decision \\= "prompt", &#x20;
+
+    justification \\= "npm may modify dependencies" &#x20;
+
+) &#x20;
+
+\### 决策类型
+
+决策
+
+行为
+
+`allow`
+
+自动批准
+
+`prompt`
+
+询问确认
+
+`forbidden`
+
+禁止执行
+
+\* \* \*
+
+Hooks（钩子）
+
+\---------
+
+Hooks 在特定事件时执行自定义脚本。
+
+\### 启用 Hooks
+
+启用 Hooks
+
+\--------
+
+\\\[features\\] &#x20;
+
+codex\\\_hooks = true &#x20;
+
+\### Hook 事件
+
+事件
+
+触发时机
+
+`SessionStart`
+
+会话启动
+
+`PreToolUse`
+
+工具调用前
+
+`PostToolUse`
+
+工具调用后
+
+\### 配置 Hook
+
+Hook 配置
+
+\-------
+
+\{ &#x20;
+
+  "hooks": \\\[ &#x20;
+
+    \{ &#x20;
+
+      "event": "PostToolUse", &#x20;
+
+      "matcher": \{ &#x20;
+
+        "toolName": "Bash" &#x20;
+
+      }, &#x20;
+
+      "hooks": \\\[ &#x20;
+
+        \{ &#x20;
+
+          "type": "command", &#x20;
+
+          "command": "echo 'Command executed'", &#x20;
+
+          "timeout": 10 &#x20;
+
+        } &#x20;
+
+      \\] &#x20;
+
+    } &#x20;
+
+  \\] &#x20;
+
+} &#x20;
+
+\* \* \*
+
+常见问题
+
+\----
+
+\### Q: 配置修改后如何生效？
+
+修改配置后需要重启 Codex 才能生效。
+
+\### Q: <a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a> 应放在哪里？
+
+项目根目录，或需要特殊规则的子目录。
+
+\### Q: Skills 和 Rules 的区别？
+
+Skills 定义任务执行逻辑，Rules 控制命令权限。
+
+\### Q: 如何查看当前配置？
+
+使用 `/status` 命令查看当前会话配置。

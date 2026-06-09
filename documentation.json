@@ -18,6 +18,10 @@
         "group": "codex",
         "pages": [
           {
+            "title": "Codex 配置与定制",
+            "path": "codex2"
+          },
+          {
             "title": "30分钟掌握Codex的97%功能(完整教程)",
             "path": "codex"
           }
