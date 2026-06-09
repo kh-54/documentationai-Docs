@@ -7,7 +7,7 @@
       "text": "#374151"
     },
     "dark": {
-      "brand": "#2b2927",
+      "brand": "#ffffff",
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
@@ -43,7 +43,7 @@
     ]
   },
   "title": "docs",
-  "template": "atlas",
+  "template": "classic",
   "ai": {
     "page-actions": [
       "claude",
