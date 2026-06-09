@@ -27,16 +27,16 @@
         "group": "claude",
         "pages": [
           {
-            "title": "Claude封号原因分析",
-            "path": "claude3"
+            "title": "Claude_Max_使用简述",
+            "path": "claude1"
           },
           {
             "title": "Claude_Max_使用指南",
             "path": "claude2"
           },
           {
-            "title": "Claude_Max_使用简述",
-            "path": "claude1"
+            "title": "Claude封号原因分析",
+            "path": "claude3"
           }
         ]
       }
