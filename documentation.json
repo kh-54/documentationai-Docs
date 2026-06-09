@@ -43,7 +43,7 @@
     ]
   },
   "title": "docs",
-  "template": "classic",
+  "template": "atlas",
   "ai": {
     "page-actions": [
       "claude",
